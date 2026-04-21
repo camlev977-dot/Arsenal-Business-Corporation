@@ -1,25 +1,160 @@
+<!DOCTYPE html>
 <html lang="en">
-    <p class="text-gray-400 mt-2">Luxury logos, identity systems, and visual direction.</p>
-  </div>
-  <div class="p-6 border border-white/10 rounded-xl hover:scale-105 transition">
-    <h3 class="text-xl font-bold">Digital Marketing</h3>
-    <p class="text-gray-400 mt-2">SEO, ads, and social media strategies that convert.</p>
-  </div>
-  <div class="p-6 border border-white/10 rounded-xl hover:scale-105 transition">
-    <h3 class="text-xl font-bold">Web Design</h3>
-    <p class="text-gray-400 mt-2">High-end responsive websites built for performance.</p>
-  </div>
-</section>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Arsenal Business Corporation</title>
 
-<!-- CTA -->
-<section class="text-center py-24 bg-white text-black">
-  <h2 class="text-4xl font-bold">Ready to Elevate Your Business?</h2>
-  <p class="mt-4">Let’s build something powerful together.</p>
-  <a href="contact.html" class="inline-block mt-6 px-8 py-3 bg-black text-white rounded-full">
-    Contact Us
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glow text */
+.glow {
+  text-shadow: 0 0 25px rgba(255,255,255,0.15);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  elements.forEach(el => observer.observe(el));
+});
+</script>
+
+</head>
+
+<body class="bg-black text-white font-sans">
+
+<!-- NAV -->
+<header class="flex justify-between items-center px-8 py-6 border-b border-white/10 sticky top-0 bg-black/70 backdrop-blur-lg z-50">
+  <h1 class="text-xl font-bold tracking-widest">ARSENAL</h1>
+
+  <nav class="space-x-6 text-sm">
+    <a href="#home" class="hover:text-gray-400">Home</a>
+    <a href="#services" class="hover:text-gray-400">Services</a>
+    <a href="#work" class="hover:text-gray-400">Work</a>
+    <a href="#contact" class="hover:text-gray-400">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-black via-gray-900 to-black reveal">
+  <h2 class="text-5xl md:text-7xl font-bold glow">We Build Brands That Win</h2>
+
+  <p class="text-gray-400 mt-6 max-w-xl">
+    Premium marketing, design, and digital strategy for businesses ready to scale.
+  </p>
+
+  <a href="#contact" class="mt-8 px-8 py-3 bg-white text-black rounded-full font-semibold hover:scale-105 transition">
+    Get Started
   </a>
 </section>
 
+<!-- SERVICES -->
+<section id="services" class="py-24 px-10">
+  <h2 class="text-4xl font-bold text-center mb-12 reveal">Our Services</h2>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <div class="p-6 border border-white/10 rounded-xl hover:scale-105 transition reveal">
+      <h3 class="text-xl font-bold">Brand Identity</h3>
+      <p class="text-gray-400 mt-2">Luxury logos, identity systems, and visual direction.</p>
+    </div>
+
+    <div class="p-6 border border-white/10 rounded-xl hover:scale-105 transition reveal">
+      <h3 class="text-xl font-bold">Digital Marketing</h3>
+      <p class="text-gray-400 mt-2">SEO, ads, and social media strategies that convert.</p>
+    </div>
+
+    <div class="p-6 border border-white/10 rounded-xl hover:scale-105 transition reveal">
+      <h3 class="text-xl font-bold">Web Design</h3>
+      <p class="text-gray-400 mt-2">High-end responsive websites built for performance.</p>
+    </div>
+
+    <div class="p-6 border border-white/10 rounded-xl hover:scale-105 transition reveal">
+      <h3 class="text-xl font-bold">SEO Optimization</h3>
+      <p class="text-gray-400 mt-2">Rank higher and get found faster online.</p>
+    </div>
+
+    <div class="p-6 border border-white/10 rounded-xl hover:scale-105 transition reveal">
+      <h3 class="text-xl font-bold">Social Media</h3>
+      <p class="text-gray-400 mt-2">Content creation, growth, and full management.</p>
+    </div>
+
+    <div class="p-6 border border-white/10 rounded-xl hover:scale-105 transition reveal">
+      <h3 class="text-xl font-bold">Advertising</h3>
+      <p class="text-gray-400 mt-2">Paid campaigns that maximize ROI.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="py-24 px-10 bg-gray-950">
+  <h2 class="text-4xl font-bold text-center mb-12 reveal">Our Work</h2>
+
+  <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+
+    <div class="border border-white/10 p-8 rounded-xl reveal">
+      Brand Identity Project
+    </div>
+
+    <div class="border border-white/10 p-8 rounded-xl reveal">
+      Website Design Project
+    </div>
+
+    <div class="border border-white/10 p-8 rounded-xl reveal">
+      Marketing Campaign
+    </div>
+
+    <div class="border border-white/10 p-8 rounded-xl reveal">
+      Social Media Growth
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 px-10 text-center bg-white text-black reveal">
+
+  <h2 class="text-4xl font-bold">Contact Us</h2>
+
+  <p class="mt-6">1369 Glassboro Rd, Woodbury Heights, NJ</p>
+  <p>(856) 219-2226</p>
+  <p>Open 24 Hours</p>
+
+  <a href="tel:+18562192226" class="inline-block mt-8 px-8 py-3 bg-black text-white rounded-full">
+    Call Now
+  </a>
+
+</section>
+
+<!-- FOOTER -->
 <footer class="text-center py-6 text-gray-500 text-sm border-t border-white/10">
   © 2026 Arsenal Business Corporation
 </footer>
